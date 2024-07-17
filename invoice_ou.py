@@ -12,7 +12,7 @@ end_date = current_month_first_day.strftime('%Y-%m-%d')
 start_date = prev_month_first_day.strftime('%Y-%m-%d')
 
 
-boto3.setup_default_session(profile_name='abra-cloud-reseller')
+boto3.setup_default_session(profile_name='payer-account-profile-name')
 org_client = boto3.client('organizations')
 ce_client = boto3.client('ce')
 ous = org_client.list_organizational_units_for_parent(
