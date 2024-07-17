@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 
 def upload_file_multipart(file_name, bucket, object_name):
-    boto3.setup_default_session(profile_name='abra-cloud-admin')
+    boto3.setup_default_session(profile_name='profile-name')
     s3_client = boto3.client('s3', region_name='il-central-1')
     response = s3_client.create_multipart_upload(
         Bucket=bucket,
